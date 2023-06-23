@@ -14,8 +14,8 @@ import { signOutStart } from '../../store/user/user.action';
 import {
 	NavigationContainer,
 	LogoContainer,
-	NavLinks,
 	NavLink,
+	NavLinks,
 } from './navigation.styles';
 
 const Navigation = () => {
