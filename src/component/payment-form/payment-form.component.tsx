@@ -1,3 +1,5 @@
+import { FC } from 'react';
+
 import { useState, FormEvent } from 'react';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { StripeCardElement } from '@stripe/stripe-js';
@@ -13,17 +15,20 @@ import {
 	FormContainer,
 	PaymentButton,
 } from './payment-form.styles';
+import { setCartItems } from '../../store/cart/cart.action';
 
 const ifValidCardElement = (
 	card: StripeCardElement | null
 ): card is StripeCardElement => card !== null;
 
-const PaymentForm = () => {
+const PaymentForm: FC = () => {
 	const stripe = useStripe();
 	const elements = useElements();
 	const amount = useSelector(selectCartTotal);
 	const currentUser = useSelector(selectCurrentUser);
 	const [isProcessingPayment, setIsProcessingPayment] = useState(false);
+
+	const [total, setTotal] = useState(0);
 
 	const paymentHandler = async (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
