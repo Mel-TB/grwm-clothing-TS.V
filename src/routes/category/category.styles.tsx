@@ -5,10 +5,19 @@ export const CategoryContainer = styled.div`
 	grid-template-columns: repeat(4, 1fr);
 	column-gap: 20px;
 	row-gap: 50px;
+
+	@media screen and (max-width: 768px) {
+		display: flex;
+		flex-direction: column;
+	}
 `;
 
 export const Title = styled.h2`
 	font-size: 38px;
 	margin-bottom: 25px;
 	text-align: center;
+
+	@media screen and (max-width: 768px) {
+		font-size: 30px;
+	}
 `;

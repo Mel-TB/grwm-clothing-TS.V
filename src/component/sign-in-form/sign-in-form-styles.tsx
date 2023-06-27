@@ -10,7 +10,7 @@ export const SignInContainer = styled.div`
 	align-items: center;
 	justify-content: center;
 	gap: 15px;
-	padding: 50px 40px 20px 40px;
+	padding: 30px 40px;
 	box-shadow: 0px 106px 42px rgba(0, 0, 0, 0.01),
 		0px 59px 36px rgba(0, 0, 0, 0.05), 0px 26px 26px rgba(0, 0, 0, 0.09),
 		0px 7px 15px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
@@ -24,27 +24,11 @@ export const SignInContainer = styled.div`
 export const ButtonsContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 0;
+
+	margin-top: 20px;
 	filter: drop-shadow(0px 1px 0px #efefef)
 		drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
 	cursor: pointer;
-`;
-
-export const Separator = styled.div`
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 30px;
-	color: #8b8e98;
-`;
-
-export const Line = styled(Separator)`
-	display: block;
-	width: 100%;
-	height: 1px;
-	border: 0;
-	background-color: #e8e8e8;
 `;
 
 export const LinkSignUp = styled(Link)`

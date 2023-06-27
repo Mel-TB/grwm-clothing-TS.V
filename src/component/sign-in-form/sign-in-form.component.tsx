@@ -13,8 +13,6 @@ import {
 import {
 	SignInContainer,
 	ButtonsContainer,
-	Separator,
-	Line,
 	LinkSignUp,
 } from './sign-in-form-styles';
 
@@ -56,7 +54,16 @@ const SignInForm = () => {
 	return (
 		<SignInContainer>
 			<h2>Already have an account?</h2>
-			<span>Sign in with your email and password</span>
+			<ButtonsContainer>
+				<Button
+					buttonType={BUTTON_TYPE_CLASSES.google}
+					type="button"
+					onClick={signInWithGoogle}
+				>
+					Sign in with Google
+				</Button>
+			</ButtonsContainer>
+
 			<form onSubmit={handleSubmit}>
 				<FormInput
 					label="Email"
@@ -78,22 +85,6 @@ const SignInForm = () => {
 				<ButtonsContainer>
 					<Button type="submit" buttonType={BUTTON_TYPE_CLASSES.inverted}>
 						Sign In
-					</Button>
-				</ButtonsContainer>
-
-				<Separator>
-					<Line />
-					<span>Or</span>
-					<Line />
-				</Separator>
-
-				<ButtonsContainer>
-					<Button
-						buttonType={BUTTON_TYPE_CLASSES.google}
-						type="button"
-						onClick={signInWithGoogle}
-					>
-						Sign in with Google
 					</Button>
 				</ButtonsContainer>
 			</form>

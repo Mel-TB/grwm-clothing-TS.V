@@ -1,4 +1,3 @@
-
 import { styled } from 'styled-components';
 import { Link } from 'react-router-dom';
 
@@ -14,6 +13,10 @@ export const LogoContainer = styled(Link)`
 	height: 100%;
 	width: 70px;
 	padding: 25px;
+
+	@media screen and (max-width: 768px) {
+		padding: 4px 10px;
+	}
 `;
 
 export const NavLinks = styled.div`
@@ -22,9 +25,18 @@ export const NavLinks = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
+
+	@media screen and (max-width: 768px) {
+		width: 70%;
+		font-size: 16px;
+	}
 `;
 
 export const NavLink = styled(Link)`
 	padding: 10px 15px;
 	cursor: pointer;
+
+	@media screen and (max-width: 768px) {
+		padding: 15px 10px;
+	}
 `;
